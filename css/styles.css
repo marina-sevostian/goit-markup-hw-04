@@ -115,7 +115,21 @@ img {
   display: flex;
   gap: 40px;
 }
-
+.nav-a-first {
+  position: relative;
+  color: #404bbf;
+}
+.nav-a-first::after {
+  display: block;
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+}
 .address-a {
   font-weight: 400;
   font-size: 16px;
@@ -135,8 +149,17 @@ img {
 
 /* #region hero-section */
 .hero-section {
-  background: #2e2f42;
+  background-color: #2e2f42;
   padding: 188px 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -171,6 +194,7 @@ img {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .button-hero-section:hover {
@@ -225,6 +249,14 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
+.about-company-item-box {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 100%;
+  background: #f4f4fd;
+}
+
 /* #endregion about-company-section */
 /* #region our-teams-section */
 
@@ -266,6 +298,26 @@ img {
   text-align: center;
 }
 
+.social-media-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.social-media-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+
+.social-media-vector {
+  fill: #fff;
+}
 /* #endregion our-teams-section */
 /* #region our-portfolio-section */
 
@@ -332,5 +384,18 @@ img {
 .footer-section {
   background: #2e2f42;
   padding: 100px 0;
+}
+
+.social-media-title-footer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.social-media-link-footer:hover,
+.social-media-link-footer:focus {
+  background-color: #31d0aa;
 }
 /* #endregion footer-section */
